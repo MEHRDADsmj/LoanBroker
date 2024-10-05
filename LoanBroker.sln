@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BankProviders.Tests", "Bank
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IBankProvider", "IBankProvider\IBankProvider.csproj", "{35512D28-A28B-458A-AD24-4908AFA93FE9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankAProvider", "BankAProvider\BankAProvider.csproj", "{1332CC48-1F94-43C3-A216-736C2DE72BAB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

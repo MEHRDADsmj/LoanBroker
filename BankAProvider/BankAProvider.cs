@@ -10,7 +10,7 @@ public class BankAProvider : IBankProvider.IBankProvider
     
     public LoanResponse CalculateLoan(LoanRequest loan)
     {
-        if (IsAmountInBounds(loan.Amount))
+        if (IsAmountOutOfBounds(loan.Amount))
         {
             throw new ArgumentOutOfRangeException(nameof(loan), "loan.Amount is less than 0");
         }
@@ -24,7 +24,7 @@ public class BankAProvider : IBankProvider.IBankProvider
         }
     }
     
-    private bool IsAmountInBounds(long amount)
+    private bool IsAmountOutOfBounds(long amount)
     {
         return amount < 0.0f || amount > loanAmountUpperLimit;
     }

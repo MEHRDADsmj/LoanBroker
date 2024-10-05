@@ -24,7 +24,7 @@ namespace BankProviders.Tests
             try
             {
                 var response = provider.CalculateLoan(loan);
-                long sum = response.Installments.Sum();
+                float sum = response.Installments.Sum();
 
                 if (Math.Abs(sum - amount * (1 + provider.interestRate)) < 1.0f)
                 {

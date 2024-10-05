@@ -6,7 +6,7 @@ public class BankAProvider : IBankProvider.IBankProvider
 {
     public readonly float interestRate = 0.2f;
     private int numberOfInstallments = 10;
-    public readonly long loanAmountUpperLimit = 999999999999;
+    public readonly int loanAmountUpperLimit = Int32.MaxValue;
     
     public LoanResponse CalculateLoan(LoanRequest loan)
     {
@@ -24,20 +24,20 @@ public class BankAProvider : IBankProvider.IBankProvider
         }
     }
     
-    private bool IsAmountOutOfBounds(long amount)
+    private bool IsAmountOutOfBounds(float amount)
     {
         return amount < 0.0f || amount > loanAmountUpperLimit;
     }
 
-    private long CalculateTotalLoanAndInterest(long amount)
+    private float CalculateTotalLoanAndInterest(float amount)
     {
-        return (long)(amount * (interestRate + 1.0f));
+        return amount * (interestRate + 1.0f);
     }
 
-    private List<long> ExtractInstallments(long totalAmount)
+    private List<float> ExtractInstallments(float totalAmount)
     {
-        var installmentAmount = totalAmount / numberOfInstallments;
-        List<long> installments = new List<long>();
+        float installmentAmount = totalAmount / numberOfInstallments;
+        List<float> installments = new List<float>();
         for (int i = 0; i < numberOfInstallments; i++)
         {
             installments.Add(installmentAmount);

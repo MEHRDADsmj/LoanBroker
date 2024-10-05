@@ -2,5 +2,5 @@
 
 public class LoanResponse
 {
-    public List<long> Installments { get; set; } = new List<long>();
+    public List<float> Installments { get; set; } = new List<float>();
 }

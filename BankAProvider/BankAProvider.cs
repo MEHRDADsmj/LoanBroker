@@ -12,7 +12,7 @@ public class BankAProvider : IBankProvider.IBankProvider
     {
         if (IsAmountOutOfBounds(loan.Amount))
         {
-            throw new ArgumentOutOfRangeException(nameof(loan), "loan.Amount is less than 0");
+            throw new ArgumentOutOfRangeException(nameof(loan), "loan.Amount is out of bounds");
         }
         else
         {

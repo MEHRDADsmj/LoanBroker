@@ -31,6 +31,13 @@ public class LoanController : ControllerBase
         {
             return BadRequest(e.Message);
         }
-        // Argument out of range exception is not needed since the Range attribute validates that in LoanRequest
+        catch (ArgumentOutOfRangeException e)
+        {
+            return BadRequest(e.Message);
+        }
+        catch (InvalidOperationException e)
+        {
+            return BadRequest(e.Message);
+        }
     }
 }

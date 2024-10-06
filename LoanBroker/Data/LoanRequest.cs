@@ -8,5 +8,5 @@ public class LoanRequest
     public string BankName { get; set; } = null!;
     
     [Required]
-    public long Amount { get; set; }
+    public float Amount { get; set; }
 }

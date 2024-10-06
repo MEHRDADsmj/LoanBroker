@@ -17,7 +17,7 @@ public class LoanController : ControllerBase
     [HttpGet("/")]
     public async Task<ActionResult<LoanResponse>> RequestLoan(LoanRequest loanRequest)
     {
-        var resp = bankProvider.CalculateLoan(loanRequest);
+        var resp = bankProvider.CalculateLoan(loanRequest.Amount);
         return Ok(resp);
     }
 }

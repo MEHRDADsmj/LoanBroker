@@ -1,6 +1,4 @@
-﻿using LoanBroker.Data;
-
-namespace BankAProvider;
+﻿namespace BankAProvider;
 
 public class BankAProvider : IBankProvider.IBankProvider
 {
@@ -8,19 +6,16 @@ public class BankAProvider : IBankProvider.IBankProvider
     private int numberOfInstallments = 10;
     public readonly int loanAmountUpperLimit = Int32.MaxValue;
     
-    public LoanResponse CalculateLoan(LoanRequest loan)
+    public List<float> CalculateLoan(float loan)
     {
-        if (IsAmountOutOfBounds(loan.Amount))
+        if (IsAmountOutOfBounds(loan))
         {
-            throw new ArgumentOutOfRangeException(nameof(loan), "loan.Amount is out of bounds");
+            throw new ArgumentOutOfRangeException(nameof(loan), "loan is out of bounds");
         }
         else
         {
-            var totalValue = CalculateTotalLoanAndInterest(loan.Amount);
-            return new LoanResponse()
-                   {
-                       Installments = ExtractInstallments(totalValue),
-                   };
+            var totalValue = CalculateTotalLoanAndInterest(loan);
+            return ExtractInstallments(totalValue);
         }
     }
     

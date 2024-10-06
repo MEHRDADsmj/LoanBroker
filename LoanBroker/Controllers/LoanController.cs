@@ -7,17 +7,30 @@ namespace LoanBroker.Controllers;
 [Route("api/[controller]")]
 public class LoanController : ControllerBase
 {
+    private readonly IBankProviderFactory.IBankProviderFactory factory;
     private IBankProvider.IBankProvider bankProvider;
 
-    public LoanController()
+    public LoanController(IBankProviderFactory.IBankProviderFactory factory)
     {
-        
+        this.factory = factory;
     }
     
-    [HttpGet("/")]
+    [HttpPost("request")]
     public async Task<ActionResult<LoanResponse>> RequestLoan(LoanRequest loanRequest)
     {
-        var resp = bankProvider.CalculateLoan(loanRequest.Amount);
-        return Ok(resp);
+        try
+        {
+            bankProvider = factory.GetBankProvider(loanRequest.BankName);
+            var resp = new LoanResponse()
+                       {
+                           Installments = bankProvider.CalculateLoan(loanRequest.Amount)
+                       };
+            return Ok(resp);
+        }
+        catch (KeyNotFoundException e)
+        {
+            return BadRequest(e.Message);
+        }
+        // Argument out of range exception is not needed since the Range attribute validates that in LoanRequest
     }
 }

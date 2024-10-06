@@ -8,5 +8,6 @@ public class LoanRequest
     public string BankName { get; set; } = null!;
     
     [Required]
+    [Range(0.0f, float.MaxValue)]
     public float Amount { get; set; }
 }

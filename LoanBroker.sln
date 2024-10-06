@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankProviderFactory", "Bank
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IBankProvider", "IBankProvider\IBankProvider.csproj", "{3F3531CD-AA78-48B6-AC59-E3D871B9F118}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankProviderFactory.Tests", "BankProviderFactory.Tests\BankProviderFactory.Tests.csproj", "{5120130C-415E-423B-8748-F6749226A84E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{3F3531CD-AA78-48B6-AC59-E3D871B9F118}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3F3531CD-AA78-48B6-AC59-E3D871B9F118}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3F3531CD-AA78-48B6-AC59-E3D871B9F118}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5120130C-415E-423B-8748-F6749226A84E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5120130C-415E-423B-8748-F6749226A84E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5120130C-415E-423B-8748-F6749226A84E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5120130C-415E-423B-8748-F6749226A84E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

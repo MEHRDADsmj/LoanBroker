@@ -24,6 +24,7 @@
   <ItemGroup>
     <ProjectReference Include="..\BankAProvider\BankAProvider.csproj" />
     <ProjectReference Include="..\BankBProvider\BankBProvider.csproj" />
+    <ProjectReference Include="..\BankCProvider\BankCProvider.csproj" />
     <ProjectReference Include="..\LoanBroker\LoanBroker.csproj" />
   </ItemGroup>
 

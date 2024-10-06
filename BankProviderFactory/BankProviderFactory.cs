@@ -1,10 +1,10 @@
 ﻿namespace BankProviderFactory;
 
-public class BankProviderFactory
+public class BankProviderFactory : IBankProviderFactory.IBankProviderFactory
 {
     private Dictionary<string, IBankProvider.IBankProvider> providerDict;
 
-    public void Init()
+    public BankProviderFactory()
     {
         providerDict = new Dictionary<string, IBankProvider.IBankProvider>
                        {

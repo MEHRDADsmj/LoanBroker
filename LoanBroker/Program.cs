@@ -1,5 +1,5 @@
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddScoped<BankProviderFactory.BankProviderFactory>();
+builder.Services.AddScoped<IBankProviderFactory.IBankProviderFactory, BankProviderFactory.BankProviderFactory>();
 builder.Services.AddControllers();
 
 var app = builder.Build();

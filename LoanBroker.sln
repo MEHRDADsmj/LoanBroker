@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IBankProvider", "IBankProvi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankProviderFactory.Tests", "BankProviderFactory.Tests\BankProviderFactory.Tests.csproj", "{5120130C-415E-423B-8748-F6749226A84E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IBankProviderFactory", "IBankProviderFactory\IBankProviderFactory.csproj", "{04E3B5D5-92DB-4117-A245-7183A22DBA35}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{5120130C-415E-423B-8748-F6749226A84E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5120130C-415E-423B-8748-F6749226A84E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5120130C-415E-423B-8748-F6749226A84E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04E3B5D5-92DB-4117-A245-7183A22DBA35}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04E3B5D5-92DB-4117-A245-7183A22DBA35}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04E3B5D5-92DB-4117-A245-7183A22DBA35}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04E3B5D5-92DB-4117-A245-7183A22DBA35}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

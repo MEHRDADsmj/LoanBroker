@@ -8,7 +8,6 @@ public class testBankProviderFactory
     public void Setup()
     {
         factory = new BankProviderFactory();
-        factory.Init();
     }
 
     [Test]

@@ -10,6 +10,7 @@ public class BankProviderFactory : IBankProviderFactory.IBankProviderFactory
                        {
                            { "bank_a", new BankAProvider.BankAProvider() },
                            { "bank_b", new BankBProvider.BankBProvider() },
+                           { "bank_c", new BankCProvider.BankCProvider() },
                        };
     }
 

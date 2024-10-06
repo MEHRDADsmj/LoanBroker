@@ -14,6 +14,8 @@ public class testBankProviderFactory
     [TestCase("bank_a")]
     [TestCase("Bank_A")]
     [TestCase("BANK_A")]
+    [TestCase("BANK_b")]
+    [TestCase("BANK_C")]
     public void testGetBankProviderSuccess(string bankName)
     {
         var provider = factory.GetBankProvider(bankName);

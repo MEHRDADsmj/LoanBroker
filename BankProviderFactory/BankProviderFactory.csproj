@@ -9,6 +9,7 @@
     <ItemGroup>
       <ProjectReference Include="..\BankAProvider\BankAProvider.csproj" />
       <ProjectReference Include="..\BankBProvider\BankBProvider.csproj" />
+      <ProjectReference Include="..\BankCProvider\BankCProvider.csproj" />
       <ProjectReference Include="..\IBankProviderFactory\IBankProviderFactory.csproj" />
     </ItemGroup>
 

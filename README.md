@@ -1,6 +1,6 @@
 # Loan Broker
 
-A middleware to provide users with loans from different banks. Written in C# and .NET Core WebAPI
+A middleware to provide users with loans from different banks. Written in C# and .NET Core WebAPI.
 
 ## Prerequisites
 
@@ -13,11 +13,11 @@ Ensure you have the following installed before running the application:
 
 ### Using Docker (Recommended)
 
-#### 1. Get the docker image file
+#### 1. Get the Docker Image File
 
 Download the loanbroker.tar from the latest release in the Releases.
 
-#### 2. Load the docker image
+#### 2. Load the Docker Image
 
 Go to the loanbroker.tar directory and run the following command:
 
@@ -25,7 +25,7 @@ Go to the loanbroker.tar directory and run the following command:
 docker load -i loanbroker.tar
 ```
 
-#### 3. Verify the image
+#### 3. Verify the Image
 
 Once loaded, verify the image by running this:
 
@@ -35,12 +35,12 @@ docker images
 
 You should see a loan_broker image.
 
-#### 4. Run a container
+#### 4. Run a Container
 
 Use the following command to create and run a container from the image:
 
 ```bash
-docker run -d -p <some_port_number>:80 --name loanbroker loan_broker
+docker run -d -p 5000:80 --name loanbroker loan_broker
 ```
 
 ### Using command line
@@ -85,7 +85,7 @@ dotnet run -lp <desired_launch_profile>
 
 ### Testing the API
 
-You can use tools like [Postman](https://www.postman.com/) to test the API.
+You can use tools like [Postman](https://www.postman.com/) to test the API. The collection for this application is available in the Releases.
 
 ## Contributing
 

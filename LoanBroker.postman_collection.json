@@ -1,0 +1,57 @@
+{
+	"info": {
+		"_postman_id": "8a4d946a-da02-4bb7-872d-e9ae6d394a5e",
+		"name": "LoanBroker",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "29105288"
+	},
+	"item": [
+		{
+			"name": "RequestLoan",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"bankname\": \"Bank_a\",\r\n    \"amount\": 160.0\r\n}\r\n\r\n// {\r\n//     \"bankname\": \"Bank_b\",\r\n//     \"amount\": 160.0\r\n// }\r\n\r\n// {\r\n//     \"bankname\": \"Bank_c\",\r\n//     \"amount\": 160.0\r\n// }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{localhttp}}/api/loan/request"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "localhttp",
+			"value": "http://localhost:5000",
+			"type": "string"
+		}
+	]
+}
